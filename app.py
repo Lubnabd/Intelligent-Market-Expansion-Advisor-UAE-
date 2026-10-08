@@ -37,10 +37,19 @@ advisor = Agent(
         # "competitors, regulations, or fees",
         # "When information is uncertain, clearly say so",
         # "Finish recommendations with practical next actions",
-        "Use the restaurant profile tool for information about our restaurant.",
-        "Use web search when the question requires current or external information.",
-        "Do not invent exact rents, regulations, prices, or statistics.",
-        "Prefer reliable and official sources.",
+        # "Use the restaurant profile tool for information about our restaurant.",
+        # "Use web search when the question requires current or external information.",
+        # "Do not invent exact rents, regulations, prices, or statistics.",
+        # "Prefer reliable and official sources.",
+
+        "Use web search when current or external information is needed.",
+        "Prefer authoritative sources.",
+        "For licensing, regulations, permits, and food safety, prioritize official UAE government sources.",
+        "For competitors, prioritize official restaurant websites, delivery-platform listings, and reputable local publications.",
+        "Do not rely on blogs or directories if a stronger source is available.",
+        "Do not invent exact rents, prices, statistics, regulations, or fees.",
+        "If reliable information cannot be verified, say so clearly.",
+        "Separate sourced facts from your analysis and recommendations."
         ],
     )
 
