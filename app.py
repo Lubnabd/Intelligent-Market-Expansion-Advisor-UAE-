@@ -5,26 +5,9 @@ from agno.tools.websearch import WebSearchTools
 
 load_dotenv()
 
-def get_restaurant_profile():
-    """
-    Returns information about the Jordanian restaurant.
-    """
-    print(">>> RESTAURANT PROFILE TOOL WAS CALLED")
-
-    with open("data/restaurant_profile.md", "r") as file:
-        return file.read()
-
-def log_tool_call(function_name, func, args):
-    print(f"\n>>> TOOL CALLED: {function_name}")
-    print(f">>> ARGS: {args}\n")
-    return func(**args)
-
 advisor = Agent(
     model=OpenAIResponses(id="gpt-5-mini"),
-    tools=[get_restaurant_profile,
-    WebSearchTools()],
-
-    tool_hooks=[log_tool_call],
+    tools=[WebSearchTools()],
 
     instructions=[
     "You are an Intelligent Market Expansion Advisor in UAE for a Jordanian restaurant",
@@ -48,7 +31,6 @@ advisor = Agent(
     "Use headings or bullet points when they make the answer easier to scan",
 
     # TOOL USAGE
-    "Use the restaurant profile tool when information about our restaurant is needed.",
     "Use web search when current or external market information is needed.",
     ],
 )
