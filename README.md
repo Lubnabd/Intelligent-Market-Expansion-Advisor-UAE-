@@ -1,21 +1,17 @@
 # Intelligent-Market-Expansion-Advisor-UAE-
 
 This project is an Agentic AI advisory system built for a Jordanian restaurant planning to expand into Dubai and Abu Dhabi.
-
 The system helps management ask questions about locations, competitors, menu strategy, pricing, marketing, operations, delivery, and licensing.
-
 It is built in Python using Agno as the agent framework and OpenAI as the LLM.
-
 The agent can decide when current external information is needed and use `WebSearchTools` to research it.
-
 A CLI chatbot is used for fast interaction and testing.
-
 The final responses are structured as clear, actionable, and executive-friendly recommendations.
 
 # Documentation
 
 ## Architecture overview
 
+```text
 Executive question
         ↓
 Agno Agent receives the question, instructions, and available tools
@@ -24,7 +20,8 @@ OpenAI LLM understands the question
         ↓
 Does this require current or external information?
         ↓
-if external then it will use (WebSearchTool) and if not it will use built-in knowledge
+If yes → use WebSearchTools
+If no  → use built-in knowledge
         ↓
 Search tool
         ↓
@@ -32,9 +29,10 @@ Relevant evidence
         ↓
 Search results are returned to OpenAI
         ↓
-OpenAI analyzes evidence
+OpenAI analyzes the evidence
         ↓
 Recommendation
+```
 
 ### Model
 
@@ -52,30 +50,33 @@ Agent harness: Rather than implementing the entire LLM execution and tool-callin
 
 ### 1. clone the repository
 
-git clone <repo-ssh-url>
-cd Intelligent-Market-Expansion-Advisor-UAE
+- git clone <repo-ssh-url>
+
+- cd Intelligent-Market-Expansion-Advisor-UAE
 
 ### 2. Create a virtual environment and activate it
 
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+- python3 -m venv .venv
+
+- source .venv/bin/activate
+
+- pip install -r requirements.txt
 
 ### 3. Create .env file and add your free API Key(private and should not be seen by anyone)
 
-OPENAI_API_KEY=your_openai_api_key
+- OPENAI_API_KEY=your_openai_api_key
 
 ### 5. Run the agent
 
-python app.py
+- python app.py
 
 ### 6. Start your question after the 'You:'
 
-Questions like: Which areas in Dubai are most suitable for our expantion?
+- Questions like: Which areas in Dubai are most suitable for our expantion?
 
 ### 7. to exit the activated environment after you get the response:
 
-exit
+- exit
 
 ## Key design decisions
 
@@ -119,7 +120,7 @@ Shorter answers help reduce output tokens, while limiting search results and con
 
 ## Limitations
 
-### No private business data
+### 1. No private business data
 
 The advisor currently uses only the restaurant context included in the instructions.
 
@@ -129,7 +130,7 @@ It does not have access to actual:
 - customer analytics
 - supplier information
 
-### Limited market data
+### 2. Limited market data
 
 The system does not currently connect to professional commercial datasets for exact rents, foot traffic or restaurant sales
 
