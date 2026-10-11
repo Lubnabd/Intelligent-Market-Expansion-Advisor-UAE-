@@ -160,15 +160,15 @@ The system does not currently connect to professional commercial datasets for ex
 ### Questions:
 
 1. "What does our restaurant specialize in?"
-2. "Who are the current pizza and kebab competitors in Dubai?"
-3. "What government requirements should we investigate before opening a restaurant in Dubai?"
-4. "What are current restaurant trends relevant to our concept?"
-5. "Which areas in Dubai fit our restaurant?"
-6. "How should we adapt our menu for UAE customers?"
-7. "What pricing bands should we consider in Dubai?"
-8. "What staffing issues should we plan for?"
-9. "What delivery strategy should we use in Dubai?"
-10. "Give management a complete Abu Dhabi expansion plan"
+2. "How should we adapt our menu for UAE customers?"
+3. "Which areas in Dubai fit our restaurant?"
+4. "What staffing issues should we plan for?"
+5. "What delivery strategy should we use in Dubai?"
+6. "What are current restaurant trends relevant to our concept?"
+7. "Give management a complete Abu Dhabi expansion plan"
+8. "What government requirements should we investigate before opening a restaurant in Dubai?"
+9. "What pricing bands should we consider in Dubai?"
+10. "Who are the current pizza and kebab competitors in Dubai?"
 
 ### What worked well
 

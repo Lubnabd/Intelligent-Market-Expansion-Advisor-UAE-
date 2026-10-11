@@ -4,6 +4,9 @@ from agno.models.openai import OpenAIResponses
 from agno.tools.websearch import WebSearchTools
 from pydantic import BaseModel
 
+import logging
+logging.disable(logging.CRITICAL) # Hides all logging messages
+
 load_dotenv()
 class Recommendation(BaseModel):
     recommendation: str
@@ -59,4 +62,4 @@ while True:
         break
 
     advisor.print_response(question,
-                            stream=True)
+                            stream=False)
