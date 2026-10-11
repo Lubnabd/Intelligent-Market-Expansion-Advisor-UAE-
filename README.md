@@ -48,35 +48,56 @@ Agent harness: Rather than implementing the entire LLM execution and tool-callin
 
 ## How to run the project locally
 
-### 1. clone the repository
+### 1. Clone the repository
 
-- git clone <repo-ssh-url>
-
-- cd Intelligent-Market-Expansion-Advisor-UAE
+```bash
+git clone <repo-ssh-url>
+cd Intelligent-Market-Expansion-Advisor-UAE
+```
 
 ### 2. Create a virtual environment and activate it
 
-- python3 -m venv .venv
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-- source .venv/bin/activate
+### 3. Create a `.env` file and add your API key
 
-- pip install -r requirements.txt
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
 
-### 3. Create .env file and add your free API Key(private and should not be seen by anyone)
+Keep your API key private and never commit your `.env` file.
 
-- OPENAI_API_KEY=your_openai_api_key
+### 4. Run the agent
 
-### 5. Run the agent
+```bash
+python app.py
+```
 
-- python app.py
+### 5. Start asking questions after `You:`
 
-### 6. Start your question after the 'You:'
+Example:
 
-- Questions like: Which areas in Dubai are most suitable for our expantion?
+```text
+Which areas in Dubai are most suitable for our expansion?
+```
 
-### 7. to exit the activated environment after you get the response:
+### 6. Exit the chatbot
 
-- exit
+Type:
+
+```text
+exit
+```
+
+### 7. Deactivate the virtual environment
+
+```bash
+deactivate
+```
 
 ## Key design decisions
 
